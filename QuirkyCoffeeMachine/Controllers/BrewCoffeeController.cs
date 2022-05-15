@@ -32,8 +32,7 @@ namespace QuirkyCoffeeMachine.Controllers
         private BrewCoffeeModel ProcessGet()
         {
             string message = "Your piping hot coffee is ready";         
-            int statusCode = 200;
-            string statusMessage = "OK";
+            int statusCode = 200;           
 
             //Get persisted data 
             List<BrewCoffeeModel> brewCoffeeData = BrewCoffeeModel.GetBrewCoffeeData();
@@ -42,8 +41,7 @@ namespace QuirkyCoffeeMachine.Controllers
             if (DateTime.Now.Month == 4 && DateTime.Now.Day == 1)
             {
                 message = "";
-                statusCode = 418;
-                statusMessage = "I'm a teapot";
+                statusCode = 418;                
             }
             else
             {
@@ -57,8 +55,7 @@ namespace QuirkyCoffeeMachine.Controllers
                     if (brewCoffeeDataCopy.Where(x => x.StatusCode == 200).ToList().Count >= 5)
                     {
                         message = "";
-                        statusCode = 503;
-                        statusMessage = "Service Unavailable";
+                        statusCode = 503;                        
                     }
                 }
             }
@@ -67,8 +64,7 @@ namespace QuirkyCoffeeMachine.Controllers
             BrewCoffeeModel newBrew = new BrewCoffeeModel()
             {
                 Message = message,
-                StatusCode = statusCode,
-                StatusMessage = statusMessage
+                StatusCode = statusCode
             };
 
             brewCoffeeData.Add(newBrew);

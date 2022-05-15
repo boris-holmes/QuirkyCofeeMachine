@@ -13,8 +13,7 @@ namespace QuirkyCoffeeMachine.Model
         public DateTime CreatedDate => DateTime.Now;
 
         public int StatusCode { get; set; }
-        public string StatusMessage { get; set; }
-
+        
         public static List<BrewCoffeeModel> GetBrewCoffeeData()
         {
             string BrewCoffeeDataFile = Directory.GetCurrentDirectory()+"/Data/BrewCoffeeData.json";
