@@ -30,7 +30,6 @@ I have decided to only do manual integration tests on the business logic. I am a
 - > You should get a 418 response code and no coffee
 
 ### The 1st of April behaviour does not interfer with the number of brews
-### I can get 5 brews out of a single coffee bean fill
 - Pre-requisite:
 -- The coffee machine is online
 -- It's not the 1st of April
